@@ -122,6 +122,11 @@ const config = () => {
     )
 
     .option(
+      '--startCode <value>',
+      'web font start point' + printDefaultOption('startCode')
+    )
+
+    .option(
       '-u, --fonts-url <value>',
       'public URL to the fonts directory (used in the generated CSS)'
     )
@@ -150,7 +155,8 @@ const buildOptions = async (cmd: commander.Command, loadedConfig = {}) => {
       selector: opts.selector,
       tag: opts.tag,
       prefix: opts.prefix,
-      fontsUrl: opts.fontsUrl
+      fontsUrl: opts.fontsUrl,
+      startCode: opts.startCode
     })
   };
 };

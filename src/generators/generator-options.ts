@@ -17,7 +17,7 @@ export const getGeneratorOptions = (
   assets: AssetsMap
 ): FontGeneratorOptions => ({
   ...options,
-  codepoints: getCodepoints(assets, options.codepoints),
+  codepoints: getCodepoints(assets, options.codepoints, options.startCode),
   formatOptions: prefillOptions<AssetType, {}, FormatOptions>(
     Object.values(ASSET_TYPES),
     options.formatOptions,

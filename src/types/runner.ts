@@ -24,6 +24,7 @@ export type RunnerOptionalOptions = {
   prefix: string;
   fontsUrl: string;
   getIconId: GetIconIdFn;
+  startCode: number;
 };
 
 export type RunnerOptionsInput = RunnerMandatoryOptions &

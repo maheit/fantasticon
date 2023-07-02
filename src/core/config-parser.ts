@@ -32,7 +32,8 @@ const CONFIG_VALIDATORS: {
   tag: [parseString],
   prefix: [parseString],
   fontsUrl: [optional(parseString)],
-  getIconId: [optional(parseFunction)]
+  getIconId: [optional(parseFunction)],
+  startCode: [optional(parseNumeric)]
 };
 
 export const parseConfig = async (input: object = {}) => {
